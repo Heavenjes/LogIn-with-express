@@ -10,7 +10,7 @@
           <b-row no-gutters>
             <b-card-body>
               <h1>HI {{username}}</h1>
-              <h3>Welcome to iTour</h3>
+              <h3>Kalpana Dashboard</h3>
             </b-card-body>
           </b-row>
         </center>
@@ -35,7 +35,7 @@
 </style>
 
 <script>
-import ROUTER from "router";
+// import ROUTER from "router";
 export default {
   name: "card",
   data() {

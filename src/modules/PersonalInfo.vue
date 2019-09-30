@@ -15,7 +15,7 @@
               <b-card-text>
                 <h6>Username: {{username}}</h6>
                 <h6>Email: {{email}}</h6>
-                <h6 type="password">Password: {{password}}</h6>
+                <h6>Password {{password}}</h6>
               </b-card-text>
             </b-card-body>
           </b-col>
