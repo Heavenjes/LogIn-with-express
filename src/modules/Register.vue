@@ -10,13 +10,13 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="username" class="bmd-label-floating">Username</label>
-                        <input v-model= "content.username" type="text" class="form-control" id="uname" placeholder="Enter username.." />
+                        <input v-model="content.username" type="text" class="form-control" id="uname" placeholder="Enter username.." />
                     </div>
                     <div class="form-group">
                         <label for="email" class="bmd-label-floating">Email</label>
                         <input v-model="content.email" type="email" class="form-control" id="email1" placeholder="Enter email..." />
                     </div>
-                      <div class="form-group">
+                    <div class="form-group">
                         <label for="password" class="bmd-label-floating">Password</label>
                         <input v-model="content.password" type="password" class="form-control" id="loginpass" placeholder="Enter password..." />
                     </div>
@@ -26,7 +26,7 @@
                     </div>
                     <center>
                         <button id="login2" class="btn btn-primary" @click="submit">
-                            Login
+                            Register
                         </button>
 
                     </center>
@@ -36,7 +36,8 @@
     </div>
 </div>
 </template>
-<style scoped lang="scss">
+
+<style lang="scss" scoped>
 // @import"assets/colors.scss";
 
 // #username{
@@ -45,30 +46,31 @@
 // #pass{
 //   color: $primary !important;
 </style>
+
 <script>
 // import ROUTER from "router";
 import AUTH from "services/auth";
 export default {
-  data() {
-    return {
-      auth: AUTH,
-      content: {
-        username: "",
-        email: "",
-        password: "",
-        cpassword: ""
-      }
-    };
-  },
-  methods: {
-    submit: function(e) {
-      e.preventDefault();
-      sessionStorage.setItem("Username", this.content.username),
-        sessionStorage.setItem("Email", this.content.email),
-        sessionStorage.setItem("Password", this.content.password),
-        AUTH.register(this.content.email, this.content.password);
+    data() {
+        return {
+            auth: AUTH,
+            content: {
+                username: "",
+                email: "",
+                password: "",
+                cpassword: ""
+            }
+        };
+    },
+    methods: {
+        submit: function (e) {
+            e.preventDefault();
+            sessionStorage.setItem("Username", this.content.username),
+                sessionStorage.setItem("Email", this.content.email),
+                sessionStorage.setItem("Password", this.content.password),
+                AUTH.register(this.content.email, this.content.password);
+        }
     }
-  }
 };
 </script>
 
@@ -127,4 +129,3 @@ input[type=email],
     font-size: 20px;
 }
 </style>
-

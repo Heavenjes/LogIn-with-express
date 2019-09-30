@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" class="bg-dark" variant="info">
+    <b-navbar toggleable="lg" type="dark" class="bg-aqua" variant="info">
       <b-navbar-brand href="#" class="text text-light" id="title">Blood</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -20,7 +20,7 @@
 <style scoped lang="scss">
 @import "assets/colors.scss";
 #title {
-  color: $danger !important;
+  color: $jess !important;
 }
 </style>
 <script>
