@@ -96,7 +96,7 @@ export default {
 }
 
 .card-header {
-    background-color: aqua;
+    background-color: black;
     color: white;
     font-size: 30px;
 }
@@ -134,8 +134,8 @@ input[type=email],
 }
 
 .card-body {
-    background-color: black;
-    color: white;
+    background-color: aqua;
+    color: black;
     font-size: 20px;
 }
 </style>

@@ -17,7 +17,7 @@
                         <input v-model="password" type="password" class="form-control" id="loginPassword" placeholder="Enter password..." />
                     </div>
                     <center>
-                        <button id="login1" class="btn btn-primary" @click="submit">
+                        <button id="login1" class="btn btn-primary"  @click="test">  <!--@click='submit'-->
                             Login
                         </button>
                         <div class="ui hidden divider"></div>
@@ -53,6 +53,7 @@
 
 <script>
 import AUTH from 'services/auth'
+import jquery from 'jquery'
 export default {
     data() {
         AUTH
@@ -67,8 +68,24 @@ export default {
             AUTH.login(this.email, this.password)
         },
 
+        test(){
+            alert('hi')
+           let link = 'http://localhost:3000/user'
+           jquery.ajax({
+               url:link,
+               method: 'POST',
+               headers: {
+                   'Access-control-Allow-Origin': '*'
+               }
+           })
+           
+        }
+    },
+    computed:{
+
     }
-};
+
+}
 </script>
 
 <style>
@@ -83,7 +100,7 @@ export default {
 }
 
 .card-header {
-    background-color: aqua;
+    background-color: black;
     color: white;
     font-size: 30px;
 }
@@ -121,8 +138,8 @@ input[type=email],
 }
 
 .card-body {
-    background-color: black;
-    color: white;
+    background-color: aqua;
+    color: black;
     font-size: 20px;
 }
 </style>

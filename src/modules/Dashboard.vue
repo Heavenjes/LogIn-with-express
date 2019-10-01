@@ -6,11 +6,11 @@
     <div id="card">
       <b-card no-body class="overflow-hidden" style="max-width: 540px;">
         <center>
-          <b-card-img id="image" :src="require('assets/user.png')" class="rounded-0"></b-card-img>
+          <b-card-img id="image" :src="require('assets/users.png')" class="rounded-0"></b-card-img>
           <b-row no-gutters>
             <b-card-body>
-              <h1>HI {{username}}</h1>
-              <h3>Kalpana Dashboard</h3>
+              <h1>Hi {{username}}</h1>
+              <h3>WELCOME TO DASHBOARD</h3>
             </b-card-body>
           </b-row>
         </center>
@@ -23,13 +23,16 @@
 #card {
   margin-top: 30px;
   margin-left: 400px;
+  
+  
+  
 }
 .jumbotron{
     padding:20px;
     text-align: center;
 }
 #image {
-  width: 250px;
+  width: 350px;
   height: 220px;
 }
 </style>
