@@ -10,24 +10,34 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="username" class="bmd-label-floating">Username</label>
-                        <input v-model="content.username" type="text" class="form-control" id="uname" placeholder="Enter username.." />
+                        <input v-model="content.username" type="text" class="form-control" id="uname"  placeholder="Enter username.." required />
                     </div>
                     <div class="form-group">
                         <label for="email" class="bmd-label-floating">Email</label>
-                        <input v-model="content.email" type="email" class="form-control" id="email1" placeholder="Enter email..." />
+                        <input v-model="content.email" type="email" class="form-control" id="email1" placeholder="Enter email..."  required/>
                     </div>
                     <div class="form-group">
                         <label for="password" class="bmd-label-floating">Password</label>
-                        <input v-model="content.password" type="password" class="form-control" id="loginpass" placeholder="Enter password..." />
+                        <input v-model="content.password" type="password" class="form-control" id="loginpass" placeholder="Enter password..." required />
                     </div>
                     <div class="form-group">
                         <label for="cpassword" class="bmd-label-floating"> Confirm Password</label>
-                        <input v-model="content.cpassword" type="password" class="form-control" id="logincpass" placeholder="Enter password..." />
+                        <input v-model="content.cpassword" type="password" class="form-control" id="logincpass" placeholder="Enter password..." required />
                     </div>
                     <center>
                         <button id="login2" class="btn btn-primary" @click="submit">
                             Register
                         </button>
+
+                        <div class="ui hidden divider"></div>
+
+                        <div class="ui column grid">
+                            <div class="center aligned column">
+                                <p>
+                                    Got an account? <router-link to="/Login">Log In</router-link>
+                                </p>
+                            </div>
+                        </div>
 
                     </center>
                 </div>

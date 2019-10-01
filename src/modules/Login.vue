@@ -20,8 +20,18 @@
                         <button id="login1" class="btn btn-primary" @click="submit">
                             Login
                         </button>
+                        <div class="ui hidden divider"></div>
+
+                        <div class="ui column grid">
+                            <div class="center aligned column">
+                                <p>
+                                    Don't have an account? <router-link to="/Register">Sign Up</router-link>
+                                </p>
+                            </div>
+                        </div>
 
                     </center>
+
                 </div>
             </div>
         </div>
