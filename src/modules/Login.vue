@@ -17,7 +17,7 @@
                         <input v-model="password" type="password" class="form-control" id="loginPassword" placeholder="Enter password..." />
                     </div>
                     <center>
-                        <button id="login1" class="btn btn-primary"  @click="test">  <!--@click='submit'-->
+                        <button id="login1" class="btn btn-primary"  @click="submit">  <!--@click='submit'-->
                             Login
                         </button>
                         <div class="ui hidden divider"></div>
@@ -52,8 +52,9 @@
 </style>
 
 <script>
-import AUTH from 'services/auth'
-import jquery from 'jquery'
+import AUTH from 'services/auth';
+// import jquery from 'jquery'
+import ROUTER from 'router'
 export default {
     data() {
         AUTH
@@ -65,27 +66,39 @@ export default {
     methods: {
         submit: function (e) {
             e.preventDefault();
-            AUTH.login(this.email, this.password)
-        },
-
-        test(){
-            alert('hi')
-           let link = 'http://localhost:3000/user'
-           jquery.ajax({
-               url:link,
-               method: 'POST',
-               headers: {
-                   'Access-control-Allow-Origin': '*'
-               }
-           })
-           
+            let user = AUTH.login(this.email, this.password);
+            if(this.email == "" || this.password ==""){
+                alert("Please Enter your email and password!!!" );
+            
+            }else{
+                alert("Successfully Login ..")
+                ROUTER.push('/Register')
+                AUTH.setUser(user);
+                if(user!=null){
+                    ROUTER.push('/Dashboard');
+                }
+            }
         }
-    },
-    computed:{
+        }
 
-    }
+    //     test(){
+    //         alert('hi')
+    //        let link = 'http://localhost:3000/user'
+    //        jquery.ajax({
+    //            url:link,
+    //            method: 'POST',
+    //            headers: {
+    //                'Access-control-Allow-Origin': '*'
+    //            }
+    //        })
+           
+    //     }
+    // },
+    // computed:{
 
-}
+    // }
+
+};
 </script>
 
 <style>

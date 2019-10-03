@@ -58,8 +58,9 @@
 </style>
 
 <script>
-// import ROUTER from "router";
+import ROUTER from "router";
 import AUTH from "services/auth";
+import jquery from "jquery"
 export default {
     data() {
         return {
@@ -78,9 +79,31 @@ export default {
             sessionStorage.setItem("Username", this.content.username),
                 sessionStorage.setItem("Email", this.content.email),
                 sessionStorage.setItem("Password", this.content.password),
-                AUTH.register(this.content.email, this.content.password);
-        }
+            AUTH.register(this.content.email, this.content.password);
+              if(this.content.username == ""|| this.content.email =="" || this.content.password == ""){
+                  alert("Please enter the required input");
+                          ROUTER.push('/Register')
+
+              }else{
+                  alert("You are already register")
+            
+        ROUTER.push('/Login')
     }
+
+    //  test(){
+    //         alert('hi')
+           let link = `http://localhost:3000/db/create/${this.content.username}/${this.content.email}/${this.content.password}`;
+           jquery.ajax({
+               url:link,
+               method: 'GET',
+               headers: {
+                   'Access-control-Allow-Origin': '*'
+               }
+              }).then(response=>{
+            alert(response.username)
+          });
+     }
+}
 };
 </script>
 

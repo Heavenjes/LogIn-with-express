@@ -22,7 +22,7 @@
 <style scoped>
 #card {
   margin-top: 30px;
-  margin-left: 400px;
+  margin-left: 550px;
   
   
   
