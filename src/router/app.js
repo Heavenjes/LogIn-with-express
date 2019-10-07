@@ -19,7 +19,7 @@ export default {
         name: 'Dashboard',
         component: resolve => require(['modules/Dashboard.vue'], resolve),
         meta: {
-            tokenRequired: false
+            tokenRequired: true
         },
     },
     {
@@ -27,7 +27,7 @@ export default {
         name: 'Subjects',
         component: resolve => require(['modules/Subjects.vue'], resolve),
         meta: {
-            tokenRequired: false
+            tokenRequired: true
         }
     },
     {
@@ -35,7 +35,8 @@ export default {
         name: 'PersonalInfo',
         component: resolve => require(['modules/PersonalInfo.vue'], resolve),
         meta: {
-            tokenRequired: false
+            tokenRequired: true
+
         }
     },
     {
@@ -43,8 +44,9 @@ export default {
         name: 'EditProfile',
         component: resolve => require(['modules/EditProfile.vue'], resolve),
         meta: {
-            tokenRequired: false
-    }
+            tokenRequired: true
+
+        }
 
     }]
 }

@@ -1,7 +1,4 @@
-//import AUTH from '../services/auth'
-
 let beforeEnter = (to, from, next) => {
-    //AUTH.currentPath = to.path
     next()
 }
 

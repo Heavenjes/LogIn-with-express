@@ -32,20 +32,21 @@
 
 <style>
 .jumbotron {
-    padding: 20px;
+    padding: 2%;
     text-align: center;
-    background-color:pink;
+    background-color:brown;
+    color:white;
 }
 
 #card {
-    margin-top: 50px;
-    margin-left: 380px;
+    margin-top: 2%;
+    margin-left: 28%;
 }
 
-#button2{
+/* #button2{
     font-size: 20px;
-    margin-top: 10px;
-    margin-left:12%;
+    margin-top: 2%;
+    margin-left:15%;
     background: linear-gradient(#22abe9 5%, #36caf0 100%);
     border: 1px solid #0F799E;
     padding: 7px 35px;
@@ -56,13 +57,10 @@
     cursor: pointer;
     width: 20%;
 }
-h1{
-   
-}
 
 #button2:hover {
     background: linear-gradient(#36caf0 5%, #22abe9 100%);
-}
+} */
 
 </style>
 

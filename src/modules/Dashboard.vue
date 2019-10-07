@@ -9,7 +9,7 @@
           <b-card-img id="image" :src="require('assets/users.png')" class="rounded-0"></b-card-img>
           <b-row no-gutters>
             <b-card-body>
-              <h1>Hi {{username}}</h1>
+              <h2>Hi {{username}}</h2>
               <h3>WELCOME TO DASHBOARD</h3>
             </b-card-body>
           </b-row>
@@ -21,19 +21,21 @@
 
 <style scoped>
 #card {
-  margin-top: 30px;
-  margin-left: 550px;
-  
-  
-  
+  margin-top: 3%;
+  margin-left: 28%;
+  color: aqua;
+  background-color:aqua;
 }
+
 .jumbotron{
-    padding:20px;
+    padding:2%;
     text-align: center;
+    background-color:brown;
+    color:white;
 }
 #image {
-  width: 350px;
-  height: 220px;
+  width: 40%;
+  height: 30%;
 }
 </style>
 
