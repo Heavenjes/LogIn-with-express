@@ -54,7 +54,7 @@
 #card {
     margin-top: 10px;
     height: 0%;
-    background-color: darksalmon;
+    margin-right:30%;
 }
 
 .jumbotron {
@@ -71,7 +71,8 @@
     height: 200px;
     border: 1px solid aqua;
     overflow:scroll;
-    background-color:darksalmon;
+    margin-bottom: -30%;
+    margin-right:3%;
 
 }
 

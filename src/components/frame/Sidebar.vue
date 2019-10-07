@@ -1,12 +1,6 @@
 <template>
   <sidebar-menu :menu="menu" />
 </template>
- <style scoped>
- .v-sidebar-menu{
-   height: 93%;
-   margin-top:55px;
- }
- </style>
 <script>
 export default {
   data() {
@@ -42,6 +36,10 @@ export default {
   }
 };
 </script> 
-<style>
+<style scoped>
+.v-sidebar-menu{
+   height: 93%;
+   margin-top:55px;
+ }
 
 </style>

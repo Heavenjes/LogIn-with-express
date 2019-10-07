@@ -32,7 +32,7 @@
 
 <style>
 .jumbotron {
-    padding: 2%;
+    padding: 3%;
     text-align: center;
     background-color:brown;
     color:white;

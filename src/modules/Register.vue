@@ -118,13 +118,13 @@ export default {
         ROUTER.push("/Login");
       }
 
-      let link = `http://localhost:3000/db/create/${this.content.username}/${
+      let link = `http://localhost:3000/db/retrieve/${this.content.username}/${
         this.content.email
       }/${this.content.password}`;
       jquery
         .ajax({
           url: link,
-          method: "GET",
+          method: "POST",
           headers: {
             "Access-control-Allow-Origin": "*"
           }

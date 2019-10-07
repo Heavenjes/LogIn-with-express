@@ -112,6 +112,10 @@ export default {
 </script>
 
 <style>
+body{
+  background-image: url("https://i.imgur.com/v5xnqrf.jpg");
+  background-repeat: no-repeat;
+}
 .container {
   width: 400px;
   height: 210px;

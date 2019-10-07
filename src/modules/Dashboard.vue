@@ -24,7 +24,6 @@
   margin-top: 3%;
   margin-left: 28%;
   color: aqua;
-  background-color:aqua;
 }
 
 .jumbotron{
